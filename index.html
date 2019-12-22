@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Multiple pricing options: Free, Team (choose team size), Company (enterprise) and one geared to consultants. Choose the one that works for you."/>
+    <title>Pricing</title>
+    <link rel="stylesheet" href="build/css/main.min.css">
+</head>
+<body>
+<main id="app">
+    <!-- pricing-plans -->
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="pricing-plans-header">
+                <div class="pricing-plans__title">
+                    <h2 class="common-title-h2 text-center">Join the 3M+ people using Miro</h2>
+                </div>
+
+                <!-- switch -->
+                <div class="pricing-plans__switch">
+                    <input id="month" type="radio" name="first-switch" checked="checked"/>
+                    <label for="month" title="Pay Monthly" class="switch-label-1" @click="changePrice(0)">
+                        Pay Monthly
+                    </label>
+                    <input id="year" type="radio" name="first-switch"/>
+                    <label for="year" title="Pay Annualy –20%" class="switch-label-2" @click="changePrice(20)">
+                        Pay Annualy –20%
+                    </label>
+                    <span class="toggle-outside"><span class="toggle-inside"></span></span>
+                </div>
+                <!-- end -->
+            </div>
+
+            <!-- plan-list -->
+            <div class="pricing-plans-list">
+                <div class="pricing-plans-item main default">
+                    <div class="pricing-plans-item__header">
+                        <div class="pricing-plans-item__header-title">
+                            Free
+                        </div>
+                        <div class="pricing-plans-item__header-size">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12px" height="11px"
+                                 viewBox="0 0 12 11">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M-3-3h24v24H-3z"></path>
+                                    <g fill="#050038">
+                                        <rect y="8" class="st0" width="11.9" height="3"/>
+                                        <circle class="st0" cx="5.9" cy="2.4" r="2.4"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            1+
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__price">
+                        0 USD
+                    </div>
+                    <div class="pricing-plans-item__limit">
+                        <div class="common-text">
+                            &nbsp;
+                        </div>
+                        <div class="common-text bold">
+                            3 active boards
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__actions">
+                        <a href="" class="btn btn-blue">
+                            Start for free
+                        </a>
+                    </div>
+                    <div class="pricing-plans-item__integrations">
+                        <div class="common-text bold">
+                            Core 12 integrations:
+                        </div>
+                        <div class="pricing-plans-item__integrations-list">
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/adobe-cloud.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/box.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/dropbox.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/unsplash-48.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/one-drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/sketch-copy.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/g-suite-copy.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__functions">
+                        <ul class="pricing-plans-item__functions-list">
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Premade templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Public link sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Unlimited users
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-plans-item main gray">
+                    <div class="pricing-plans-item__header">
+                        <div class="pricing-plans-item__header-title">
+                            Team
+                        </div>
+                        <div class="pricing-plans-item__header-size">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12px" height="11px"
+                                 viewBox="0 0 12 11">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M-3-3h24v24H-3z"></path>
+                                    <g fill="#050038">
+                                        <rect y="8" class="st0" width="11.9" height="3"/>
+                                        <circle class="st0" cx="5.9" cy="2.4" r="2.4"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            5+
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__price">
+                        {{modifyPrice.team}} USD
+                    </div>
+                    <div class="pricing-plans-item__limit">
+                        <div class="common-text">
+                            Per user/month
+                        </div>
+                        <div class="common-text bold">
+                            Unlimited boards
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__actions">
+                        <a href="" class="btn btn-default">
+                            Buy Team
+                        </a>
+                    </div>
+                    <div class="pricing-plans-item__integrations">
+                        <div class="common-text">
+                            Core integrations <strong>plus</strong>:
+                        </div>
+                        <div class="pricing-plans-item__integrations-list">
+                            <div class="pricing-plans-item__integrations-item cluster">
+                                12+
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/adobe-cloud.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/box.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/dropbox.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/unsplash-48.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/one-drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/sketch-copy.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/g-suite-copy.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__functions">
+                        <ul class="pricing-plans-item__functions-list">
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Premade templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Public link sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Projects
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Custom templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        High-resolution export
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Kanban Framework
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-new">
+                                    New
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Private board sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-plans-item main rose">
+                    <div class="pricing-plans-item__header">
+                        <div class="pricing-plans-item__header-title">
+                            Business
+                        </div>
+                        <div class="pricing-plans-item__header-size">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12px" height="11px"
+                                 viewBox="0 0 12 11">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M-3-3h24v24H-3z"></path>
+                                    <g fill="#050038">
+                                        <rect y="8" class="st0" width="11.9" height="3"/>
+                                        <circle class="st0" cx="5.9" cy="2.4" r="2.4"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            20+
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__price">
+                        {{modifyPrice.business}} USD
+                    </div>
+                    <div class="pricing-plans-item__limit">
+                        <div class="common-text">
+                            Per user/month billed annually
+                        </div>
+                        <div class="common-text bold">
+                            Unlimited boards
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__actions">
+                        <a href="" class="btn btn-default">
+                            Buy Business
+                        </a>
+                    </div>
+                    <div class="pricing-plans-item__integrations">
+                        <div class="common-text bold">
+                            Core integrations <strong>plus</strong>:
+                        </div>
+                        <div class="pricing-plans-item__integrations-list">
+                            <div class="pricing-plans-item__integrations-item cluster">
+                                12+
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/adobe-cloud.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/box.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__functions">
+                        <ul class="pricing-plans-item__functions-list">
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Premade templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Public link sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Projects
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Custom templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        High-resolution export
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Kanban Framework
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-new">
+                                    New
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Private board sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Single Sign-On (SSO)
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Day passes for occasional users
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-plans-item main yellow">
+                    <div class="pricing-plans-item__header">
+                        <div class="pricing-plans-item__header-title">
+                            Enterprise
+                        </div>
+                        <div class="pricing-plans-item__header-size">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12px" height="11px"
+                                 viewBox="0 0 12 11">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M-3-3h24v24H-3z"></path>
+                                    <g fill="#050038">
+                                        <rect y="8" class="st0" width="11.9" height="3"/>
+                                        <circle class="st0" cx="5.9" cy="2.4" r="2.4"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            50+
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__price">
+                        Custom
+                    </div>
+                    <div class="pricing-plans-item__limit">
+                        <div class="common-text">
+                            &nbsp;
+                        </div>
+                        <div class="common-text bold">
+                            Unlimited boards
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__actions">
+                        <a href="" class="btn btn-blue">
+                            Contact us
+                        </a>
+                    </div>
+                    <div class="pricing-plans-item__integrations">
+                        <div class="common-text">
+                            Core + <strong>premium</strong> + <strong>enterprise</strong>:
+                        </div>
+                        <div class="pricing-plans-item__integrations-list">
+                            <div class="pricing-plans-item__integrations-item cluster">
+                                15+
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/adobe-cloud.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/box.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__functions">
+                        <ul class="pricing-plans-item__functions-list">
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Premade templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Public link sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Projects
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Custom templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        High-resolution export
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Kanban Framework
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-new">
+                                    New
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Private board sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Single Sign-On (SSO)
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Day passes for occasional users
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Multi-team setup for centralized account management
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Advanced security
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Domain whitelisting
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Audit logs
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Advanced permissions and administration
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Dedicated customer success manager
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Personalized onboarding program
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Security review and MSA support
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Developer platform and API access
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                        Premium support
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text">
+                                    <span class="">
+                                       Data Governance
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-plans-item additional default">
+                    <div class="pricing-plans-item__header">
+                        <div class="pricing-plans-item__header-title">
+                            Consultant
+                        </div>
+                        <div class="pricing-plans-item__header-size">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="12px" height="11px"
+                                 viewBox="0 0 12 11">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M-3-3h24v24H-3z"></path>
+                                    <g fill="#050038">
+                                        <rect y="8" class="st0" width="11.9" height="3"/>
+                                        <circle class="st0" cx="5.9" cy="2.4" r="2.4"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            1+
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__price">
+                        {{modifyPrice.consultant}} USD
+                    </div>
+                    <div class="pricing-plans-item__limit">
+                        <div class="common-text">
+                            Per user/month
+                        </div>
+                        <div class="common-text bold">
+                            Unlimited boards
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__actions">
+                        <a href="" class="btn btn-default">
+                            Buy Consultant
+                        </a>
+                    </div>
+                    <div class="pricing-plans-item__integrations">
+                        <div class="common-text bold">
+                            Core integrations <strong>plus</strong>:
+                        </div>
+                        <div class="pricing-plans-item__integrations-list">
+                            <div class="pricing-plans-item__integrations-item cluster">
+                                15+
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/drive.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/adobe-cloud.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                            <div class="pricing-plans-item__integrations-item">
+                                <img src="build/img/integrations/box.svg" alt="Тут тескт описывающий картинку">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-plans-item__functions">
+                        <ul class="pricing-plans-item__functions-list">
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Premade templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Public link sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Projects
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Custom templates
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        High-resolution export
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Kanban Framework
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-new">
+                                    New
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Private board sharing
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Single Sign-On (SSO)
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Day passes for occasional users
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="common-text hint" @mouseenter="showTooltip">
+                                    <span>
+                                        Multi-team setup for centralized account management
+                                    </span>
+                                    <div class="tooltip">
+                                        <div class="tooltip-image">
+                                            <img src="build/img/img-tooltip.PNG" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            Use empathy map, service blueprint, user story map, and other premade
+                                            templates with your team.
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+        </div>
+    </section>
+    <!-- end -->
+
+    <!-- feature-matrix -->
+    <section class="feature-matrix">
+        <div class="container">
+            <div class="text-center">
+                <div class="btn btn-default"
+                     @click="showMatrix = !showMatrix"
+                     v-if="windowWidth > 991">
+                    {{showMatrix ? 'Hide' : 'See'}} full feature matrix {{showMatrix ? '↑' : '↓'}}
+                </div>
+
+                <!-- кнопка для мобилы с подгрузкой данных-->
+                <div class="btn btn-default"
+                     @click="[showMatrix = !showMatrix, getMobileMatrix]"
+                     v-if="windowWidth < 992">
+                    {{showMatrix ? 'Hide' : 'See'}} full feature matrix {{showMatrix ? '↑' : '↓'}}
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+
+        <!-- desktop -->
+        <div class="feature-matrix-container" :class="{'is-visible': showMatrix}" v-if="windowWidth > 991">
+            <div class="container">
+                <div class="feature-matrix-head">
+                    <div class="feature-matrix__row">
+                        <div class="feature-matrix__col first"></div>
+                        <div class="feature-matrix__col"
+                             v-for="(plan, index) in plans"
+                             :class="[{ last: index === 4 }, plan.color]">
+                            <div class="feature-matrix__title">
+                                {{plan.planName}}
+                            </div>
+                            <div class="common-text mt-5">
+                                <strong>
+                                    {{typeof plan.price === 'number' ? '$' : ''}}{{plan.price}}
+                                </strong>
+                                {{plan.description}}
+                            </div>
+                            <div class="feature-matrix__col-actions">
+                                <a href="" class="btn btn-default">
+                                    {{plan.btnName}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-matrix-content">
+                    <template v-for="group in matrixData">
+                        <div class="feature-matrix__row title-group">
+                            <div class="feature-matrix__col first">
+                                <div class="feature-matrix__title">
+                                    {{group.groupName}}
+                                </div>
+                            </div>
+                        </div>
+                        <template v-for="data in group.groupData">
+                            <template v-for="prop in data">
+                                <div class="feature-matrix__row">
+                                    <div class="feature-matrix__col first">
+                                        <div class="common-text"
+                                             :class="{'hint': Object.keys(prop.tooltip).length !== 0}"
+                                             @mouseenter="showTooltip">
+                                            <span>
+                                                {{prop.value}}
+                                            </span>
+                                            <div class="tooltip" v-if="Object.keys(prop.tooltip).length !== 0">
+                                                <div class="tooltip-image">
+                                                    <img :src="prop.tooltip.imgSrc" alt="Тут тескт описывающий картинку">
+                                                </div>
+                                                <div class="tooltip-content">
+                                                    {{prop.tooltip.content}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <template v-for="(item, index) in prop.list">
+                                        <div class="feature-matrix__col" :class="{'last': index === 4}">
+                                            <div class="circle" v-if="item.type !== 'text'" :class="item.color">
+                                                <img src="build/img/plus.svg" alt="Тут тескт описывающий картинку" v-if="item.type === 'circle-plus'">
+                                                <span v-if="item.type === 'circle-dollar'">$</span>
+                                            </div>
+                                            <div class="common-text" v-else>
+                                                {{item.value}}
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                        </template>
+                        <div class="feature-matrix__row hr"></div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- mobile -->
+        <div class="feature-matrix-container" :class="{'is-visible': showMatrix}" v-if="windowWidth < 992">
+            <div class="feature-matrix-head">
+                <div class="container">
+                    <div class="feature-matrix__row">
+                        <div class="feature-matrix__col" :class="currentMobileMatrix.plan.color">
+                            <div class="feature-matrix__title">
+                                {{currentMobileMatrix.plan.planName}}
+                            </div>
+                            <div class="common-text mt-5">
+                                <strong>
+                                    {{typeof currentMobileMatrix.plan.price === 'number' ? '$' : ''}}
+                                    {{currentMobileMatrix.plan.price}}
+                                </strong>
+                                {{currentMobileMatrix.plan.description}}
+                            </div>
+                            <div class="feature-matrix__col-actions justify-content-between">
+                                <a href="" class="btn btn-default">
+                                    {{currentMobileMatrix.plan.btnName}}
+                                </a>
+                                <div class="feature-matrix__nav">
+                                    <div class="feature-matrix__nav-item btn btn-blue"
+                                         :class="{'disabled': planId === 0}"
+                                         @click="prevMatrixPlan()">
+                                        <img src="build/img/left-arrow.svg" alt="Тут тескт описывающий картинку">
+                                    </div>
+                                    <div class="feature-matrix__nav-item btn btn-blue"
+                                         :class="{'disabled': planId === 4}"
+                                         @click="nextMatrixPlan()">
+                                        <img src="build/img/right-arrow.svg" alt="Тут тескт описывающий картинку">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-matrix-content">
+                <div class="container">
+                    <template v-for="group in currentMobileMatrix.groups">
+                        <div class="feature-matrix__row title-group">
+                            <div class="feature-matrix__col">
+                                <div class="feature-matrix__title">
+                                    {{group.groupName}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-matrix__row" v-for="prop in group.props">
+                            <div class="feature-matrix__col">
+                                <div class="common-text"
+                                     :class="{'hint': Object.keys(prop.tooltip).length !== 0}"
+                                     @mouseenter="showTooltip">
+                                    <span>
+                                        {{prop.name}}
+                                    </span>
+                                    <div class="tooltip" v-if="Object.keys(prop.tooltip).length !== 0">
+                                        <div class="tooltip-image">
+                                            <img :src="prop.tooltip.imgSrc" alt="Тут тескт описывающий картинку">
+                                        </div>
+                                        <div class="tooltip-content">
+                                            {{prop.tooltip.content}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature-matrix__col">
+                                <div class="circle"
+                                     v-if="prop.value.type !== 'text'"
+                                     :class="prop.value.color">
+                                    <img src="build/img/plus.svg" alt="Тут тескт описывающий картинку" v-if="prop.value.type === 'circle-plus'">
+                                    <span v-if="prop.value.type === 'circle-dollar'">$</span>
+                                </div>
+                                <div class="common-text" v-else>
+                                    {{prop.value.value}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-matrix__row hr"></div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+    </section>
+    <!-- end -->
+
+    <!-- compliance -->
+    <section class="compliance">
+        <div class="container">
+            <div class="compliance-header text-center">
+                <div class="compliance__title">
+                    <h2 class="common-title-h2">Security and compliance</h2>
+                </div>
+                <div class="compliance__subtitle">
+                    <div class="common-text">Rest easy knowing we're fully certified by numerous organizations.﻿</div>
+                </div>
+            </div>
+            <div class="compliance-list">
+                <div class="compliance-item text-center">
+                    <div class="compliance-item__image">
+                        <img src="build/img/compliance/soc-2-2-x.png"
+                             srcset="build/img/compliance/soc-2-2-x@2x.png 2x, build/img/compliance/soc-2-2-x@3x.png 3x"
+                             alt="Тут тескт описывающий картинку">
+                    </div>
+                    <div class="compliance-item__title">
+                        SOC 2 Type II
+                    </div>
+                    <div class="compliance-item__text">
+                        SOC for Service Organizations
+                    </div>
+                </div>
+                <div class="compliance-item text-center">
+                    <div class="compliance-item__image">
+                        <img src="build/img/compliance/skyhigh-copy.png"
+                             srcset="build/img/compliance/skyhigh-copy@2x.png 2x, build/img/compliance/skyhigh-copy@3x.png 3x"
+                             alt="Тут тескт описывающий картинку">
+                    </div>
+                    <div class="compliance-item__title">
+                        Skyhigh Enterprise-Ready™
+                    </div>
+                    <div class="compliance-item__text">
+                        CloudTrust Program
+                    </div>
+                </div>
+                <div class="compliance-item text-center">
+                    <div class="compliance-item__image">
+                        <img src="build/img/compliance/csa.png"
+                             srcset="build/img/compliance/csa@2x.png 2x, build/img/compliance/csa@3x.png 3x"
+                             alt="Тут тескт описывающий картинку">
+                    </div>
+                    <div class="compliance-item__title">
+                        <a href="" class="link">CSA</a>
+                    </div>
+                    <div class="compliance-item__text">
+                        Cloud Security Alliance
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="btn btn-default">
+                    Learn more about security →
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+
+    <!-- company -->
+    <section class="company">
+        <div class="container">
+            <div class="company-header text-center">
+                <div class="company__title">
+                    <h4 class="common-title-h4">Loved by 3M+ users from companies like</h4>
+                </div>
+            </div>
+            <div class="company-list">
+                <div class="company-item">
+                    <img src="build/img/company/group-5.svg" alt="Тут тескт описывающий картинку">
+                </div>
+                <div class="company-item">
+                    <img src="build/img/company/fill-72.svg" alt="Тут тескт описывающий картинку">
+                </div>
+                <div class="company-item">
+                    <img src="build/img/company/group-7.svg" alt="Тут тескт описывающий картинку">
+                </div>
+                <div class="company-item">
+                    <img src="build/img/company/spotify-1.svg" alt="Тут тескт описывающий картинку">
+                </div>
+                <div class="company-item">
+                    <img src="build/img/company/group.svg" alt="Тут тескт описывающий картинку">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+</main>
+<script src="build/js/libs/vue.min.js"></script>
+<script src="build/js/scripts/main.min.js"></script>
+</body>
+</html>

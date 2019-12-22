@@ -1,0 +1,122 @@
+body {
+    color: $blue-700;
+    font-family: "Formular", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    border: none;
+    text-decoration: none;
+}
+
+h2, h4 {
+    font-family: "Spoof-bold", serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.common-title-h2 {
+    font-size: 32px;
+}
+
+.common-title-h4 {
+    font-size: 16px;
+}
+
+.common-text {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+    line-height: 1.5;
+    padding: 10px 15px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    @media (max-width: 1024px) {
+        font-size: 13px;
+    }
+
+    &.btn-blue {
+        background-color: $blue-400;
+        color: white;
+        border-color: $blue-400;
+
+        &:hover {
+            background-color: $blue-500;
+            border-color: $blue-500;
+        }
+    }
+
+    &.btn-default {
+        color: $blue-700;
+        border-color: $blue-700;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+    }
+
+
+    &.disabled {
+        opacity: .7;
+    }
+
+}
+
+.tag-new {
+    width: 42px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $blue-400;
+    color: white;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 1.25;
+    padding: 7px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.link {
+    color: $blue-400;
+    border-bottom: 1px solid $blue-400;
+    transition: border-color .25s ease;
+
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+.hint {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+
+    span {
+        border-bottom: 1px dashed rgba($gray-500, .5);
+    }
+
+    &:hover .tooltip, &:active .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+

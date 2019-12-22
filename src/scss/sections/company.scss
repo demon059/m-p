@@ -1,0 +1,16 @@
+.company {
+    margin-top: 50px;
+    padding-bottom: 100px;
+
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    &-item {
+        padding: 20px;
+    }
+}
